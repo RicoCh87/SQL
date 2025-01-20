@@ -38,3 +38,10 @@ SELECT Product_name
 FROM bank_products
 WHERE Product_type = 'checking'
 OR Product_type = 'Savings';
+
+# I used SQL to create a query that uses AND to show the product names that have a "Savings" product type AND have an interest_rate of at least 0.75, AND have no monthly fee.
+SELECT Product_name, interest_rate
+FROM bank_products
+WHERE Product_type = 'Savings'
+AND interest_rate >= 0.75
+AND monthly_fee = 0;
