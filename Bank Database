@@ -1,1 +1,3 @@
-
+I used SQL to select all the bank product names so we know what our options are. 
+SELECT *
+FROM bank_products;
