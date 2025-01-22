@@ -43,3 +43,10 @@ SELECT *
 FROM Products
 WHERE Product_type = 'Internet';
 
+Im creating a query that will select the customer IDs for all the customers who are subscribed to High-Speed Internet 
+
+SELECT Customer_id
+FROM Customer_subscriptions
+WHERE product_id = 1;
+
+
