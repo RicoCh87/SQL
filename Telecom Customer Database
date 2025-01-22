@@ -49,4 +49,8 @@ SELECT Customer_id
 FROM Customer_subscriptions
 WHERE product_id = 1;
 
+This query will select the email addresses of all the customers who are subscribed to products with the "Internet" product type. 
 
+SELECT Email
+FROM Customer_subscriptions
+WHERE Product_id IN (SELECT Product_id FROM Products WHERE Product_type = 'Internet');
