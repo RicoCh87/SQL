@@ -21,3 +21,7 @@ INSERT INTO marathon (participant_name, previous_experience,  completion_fractio
 #SQL in this query, We are selecting the participants and the percentage of the marathon they completed.
 SELECT Participant_name, completion_fraction*100 as completion_percent
 FROM Marathon;
+
+In this next query, We are selecting every participant name and the percent of the marathon that they completed.
+SELECT Participant_name, ROUND(completion_fraction*100,1) AS Completion_percent
+FROM Marathon;
