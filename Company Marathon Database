@@ -18,10 +18,19 @@ INSERT INTO marathon (participant_name, previous_experience,  completion_fractio
     VALUES ("Rajnighanda Kapoor", "no", 1);
 
 
-#SQL in this query, We are selecting the participants and the percentage of the marathon they completed.
+#SQL in this query, I am selecting the participants and the percentage of the marathon they completed.
 SELECT Participant_name, completion_fraction*100 as completion_percent
 FROM Marathon;
 
-In this next query, We are selecting every participant name and the percent of the marathon that they completed.
+In this next query, I am selecting every participant name and the percent of the marathon that they completed.
 SELECT Participant_name, ROUND(completion_fraction*100,1) AS Completion_percent
 FROM Marathon;
+
+In this query, Im showing how many employees completed each quarter of the marathon (75% or more, 50%, 25%, or under 25%).
+SELECT COUNT(*),
+CASE WHEN completion_fraction >= .75 THEN "%75+"
+WHEN completion_fraction >= .50 THEN "%50+"
+WHEN completion_fraction >= .25 THEN "%25+"
+ELSE "UNDER 25%" END AS "Quarter_completed"
+FROM Marathon 
+GROUP BY Quarter_completed;
