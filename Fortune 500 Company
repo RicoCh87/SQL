@@ -63,3 +63,9 @@ WHEN paid_time_off_days >=15 THEN "good"
 ELSE "Bad" END As Days_off
 FROM fortune_companies
 WHERE industry = "Energy";
+
+#Sql Selecting the companies who have the most employees in their industry that is greater than 3000.
+SELECT Company_name, employees, industry
+FROM fortune_companies
+GROUP BY industry 
+HAVING employees >= 3000;
