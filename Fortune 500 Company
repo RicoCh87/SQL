@@ -76,3 +76,10 @@ SELECT *
 FROM Fortune_companies
 WHERE Industry = "Retail"
 AND company_name like "C%"
+
+
+#SQL Creating a query that is selecting the total number of employees from fortune companies by industry that have less than or equal to 300000 employees
+SELECT SUM(employees) as Total_emp, industry 
+FROM fortune_companies
+GROUP BY industry
+HAVING employees <= 300000;
