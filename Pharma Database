@@ -78,3 +78,11 @@ FROM medication as med
 INNER JOIN prescriptions as scripts 
 ON Med.person_ID = scripts.person_ID 
 WHERE Scripts.doctor_name = 'Dr. Garcia';
+
+#SQL Making a query that tells me when the last time "Zonkify" prescriptions were filled.
+
+SELECT scripts.Date_filled
+FROM medication as med
+INNER JOIN prescriptions as scripts
+ON Med.person_ID = scripts.person_ID
+WHERE med.medication_name = "Zonkify";
