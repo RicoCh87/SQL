@@ -63,3 +63,11 @@ FROM Customers
 INNER JOIN shipments
 On customer_id = sender_id
 ORDER BY Customer_ID;
+
+#SQL Finally, im creating  a query that will select all the customer IDs, customer names, customer emails, and shipping methods from the database, but only for the customers we have detailed shipping history for and who have have only used the 'Standard' shipping method before
+SELECT distinct customer_id, customer_name, contact_email, shipping_method
+FROM customers
+INNER JOIN shipments
+ON customer_id = sender_id
+WHERE shipping_method = 'Standard'
+ORDER BY customer_id asc;
