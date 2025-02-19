@@ -134,3 +134,14 @@ SELECT CourseName, Title
  INNER JOIN Textbooks
  ON  Courses.CourseID = textbooks.CourseID
  WHERE Subject = 'Economics' AND Current = 'Yes';
+
+#SQL Finally we are finding the names of the authors who wrote the textbooks.
+SELECT CourseName, Title, Name
+ FROM Courses
+ INNER JOIN textbooks
+ ON Courses.CourseID = Textbooks.CourseID
+ LEFT JOIN AuthortextbookLink
+ ON Textbooks.TextbookID = AuthorTextbookLink.TextbookID
+ LEFT JOIN Author
+ ON AuthorTextbookLink.AuthorID = Author.AuthorId
+ WHERE Subject = 'Economics' AND Current = 'Yes';
