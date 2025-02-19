@@ -128,4 +128,9 @@ SELECT CourseName
 FROM Courses
 WHERE Subject = 'Economics' AND Current = 'Yes';
 
-
+#SQL Next we are finding the titles of the textbooks currently used in the economics courses
+SELECT CourseName, Title
+ FROM Courses
+ INNER JOIN Textbooks
+ ON  Courses.CourseID = textbooks.CourseID
+ WHERE Subject = 'Economics' AND Current = 'Yes';
