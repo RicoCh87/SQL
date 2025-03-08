@@ -29,3 +29,9 @@ Limit 5;
 SELECT track_name, artist_name
 FROM Spotifydata
 WHERE Artist_name like "B%";
+
+#Sql the query will give us the name of the top 10 tracks whose tempo is higher or equal to 145.000!
+SELECT track_name, tempo
+FROM Spotifydata
+WHERE tempo >= 145.000
+Limit 10;
