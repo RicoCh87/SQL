@@ -24,3 +24,8 @@ SELECT artist_name, popularity
 FROM Spotifydata
 WHERE 'popularity' >= 92
 Limit 5;
+
+#Sql this query will give us the names of the artists that starts with "B"
+SELECT track_name, artist_name
+FROM Spotifydata
+WHERE Artist_name like "B%";
